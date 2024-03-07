@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handin Webpage</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Responsive Redesign</h1>
+    <h2>Motivation</h2>
+    <p>
+      Let Them Eat Cake is a local dessert shop from my hometown that I have
+      fond memories of. While their website is unique and artsy, there are clear
+      usability and accessibility issues. This responsive redesign intends to
+      address these issues to improve the experience of interacting with the
+      site.
+    </p>
+    <a href="https://www.letthemeat-davis.com/" target="_blank"
+      >Link to Original Site</a
+    >
+    <div>
+      <img src="assets/original1.png" width="500" />
+    </div>
+    <h3>Finding Problems</h3>
+    <h4>Conceptual model</h4>
+    <p>
+      The site intends to guide you towards direct communication with the
+      bakery, either through sending them a message, or ordering from their
+      selection and making requests for special events. To achieve this, there
+      are multiple contact related buttons and links. There is a secondary goal
+      of encouraging in-person visits through listing store location and hours,
+      as well as allowing users to browse their menu and gallery of sweets.
+      However, there are several issues with how the site goes about this.
+    </p>
+    <h4>Learnability</h4>
+    <ul>
+      <li>
+        While the site is pretty straightforward to navigate, with a linear
+        organization and a navbar at top, relevant buttons don’t pop out too
+        well, and are laid out in seemingly random pages throughout the page.
+      </li>
+      <li>
+        There are two identical contact buttons that can be seen at the same
+        time in the viewport and a third link to the same page, which could be
+        confusing.
+      </li>
+      <li>
+        The text and background colors/images aren’t very high contrast, so it
+        can be difficult to read the page content.
+      </li>
+      <li>
+        The location and hours of the shop are at the very bottom embedded in a
+        kind of small footer area, making it easy to miss.
+      </li>
+      <li>
+        It is initially unclear what exactly store is selling, missing relevant
+        imagery and text; a menu preview could be helpful.
+      </li>
+      <li>The double navigation bar is unnecessary and could be confusing.</li>
+    </ul>
+    <h4>Memorability</h4>
+    <ul>
+      <li>
+        Because of the excessive buttons, it can be difficult to recall which
+        brings you to where you want.
+      </li>
+      <li>
+        Similarity of sections also makes it hard to recall and ambiguous what
+        to do; do I use the Get in Touch section or the Contact section?
+      </li>
+    </ul>
+    <h4>Efficiency</h4>
+    <ul>
+      <li>
+        Since there are so many buttons that will lead you to the contact page,
+        although again, users may be confused and spend time figuring out where
+        to navigate to.
+      </li>
+      <li>The map and hours in the footer are hard to find quickly.</li>
+    </ul>
+    <h3>Accessibility</h3>
+    <p>
+      Analyzing the accesibility of the site with WAVE, here are the findings:
+    </p>
+    <ul>
+      <li>Lots of color contrast errors (18)</li>
+      <li>A few broken and empty buttons and links/redundant link</li>
+      <li>Missing alt text and form labels</li>
+      <li>Generally well structured elements, with a few warnings</li>
+    </ul>
+    <p>
+      In general, I definitely agree with the WAVE accessibility assessment,
+      especially with the color contrast issues throughout the page. There are
+      also a few broken or empty navigation buttons and links and a redundant
+      link. There is some thought put into the HTML structure of the page and
+      ARIA accessibility, but missing form control labels and alternative text
+      for image indicate room for improvement.
+    </p>
+    <h2>Visual Redesign</h2>
+    <h3>Sketches</h3>
+    <p>
+      To start the process of the redesign, I quickly sketched some preliminary
+      ideas:
+    </p>
+    <div>
+      <img src="assets/sketches.png" height="500" />
+      <img src="assets/final-sketch.png" height="500" />
+    </div>
+    <h3>Low Fidelity Mockups</h3>
+    <p>
+      Then, I turned my ideas into low-fidelity mockups in Figma to plan out the
+      overall layout I wanted to achieve. To account for various screen sizes, I
+      created three mockups for desktop, tablets, and mobile.
+    </p>
+    <div>
+      <img src="assets/desktop-lofi.png" height="500" />
+      <img src="assets/tablet-lofi.png" height="500" />
+      <img src="assets/mobile-lofi.png" height="500" />
+    </div>
+    <h3>High Fidelity Mockups</h3>
+    <p>
+      As the final step in the mockup process, I created high-fidelity mockups
+      to flesh out colors, typography, and the components of the website.
+    </p>
+    <div>
+      <img src="assets/desktop-hifi.png" height="500" />
+      <img src="assets/tablet-hifi.png" height="500" />
+      <img src="assets/mobile-hifi.png" height="500" />
+    </div>
+    <h5>Visual Style Guide</h5>
+    While developing the high-fidelity prototypes, I also put together a visual
+    style guide to ensure that the overall aesthetic was cohesive.
+    <div>
+      <img src="assets/style-guide.png" width="500" />
+    </div>
+    <h2>The Redesign</h2>
+    <p>
+      Finally, it was time to code up the redesigned site using HTML/CSS and a
+      bit of JavaScript.
+    </p>
+    <h3>Notable Features and Revisions</h3>
+    <p>
+      I made a few significant UI revisions to the original site to address some
+      of the issues identified early on.
+    </p>
+    <ul>
+      <li>
+        The original sites have links to order forms that rotate seasonally
+        right after the first section. I replaced this section with an order now
+        button that leads to another page where users can access these forms.
+        This choice was made due to the seasonal nature of it, and I found that
+        placing something so specific early on in the home page was distracting.
+      </li>
+      <li>
+        I included an "Our Desserts" section to provide users with a menu
+        preview of what is offered, with each image button intended to link to
+        the respective part of the menu.
+      </li>
+      <li>
+        I moved the hours and location to a more prominent location on the page
+        rather than squishing it into the footer.
+      </li>
+      <li>
+        I kept the footer simple and placed the contact and location information
+        in relevant sections of the page instead.
+      </li>
+    </ul>
+    <p>JavaScript Additions</p>
+    <ul>
+      <li>
+        The Contact Us Button scrolls smoothly to the contact section of the
+        page rather than linking to another page
+      </li>
+      <li>
+        When the screen size drops below 800px, I collapse the navbar items into
+        a hamburger menu, which opens up a mobile dropdown.
+      </li>
+    </ul>
+    <h3>The Results</h3>
+    <a
+      href="https://smallwhale1.github.io/cs1300-responsive-redesign/"
+      target="_blank"
+      >Link to Redesigned Site</a
+    >
+    <div>
+      <img src="assets/final1.png" height="500" />
+      <img src="assets/final2.png" height="500" />
+      <img src="assets/final3.png" height="500" />
+    </div>
+  </body>
+</html>
